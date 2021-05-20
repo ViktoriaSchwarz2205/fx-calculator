@@ -8,6 +8,9 @@
         <title>Fx Calculator PWA</title>
         <link rel="stylesheet" href="style.css">  
         <script src="app.js" async></script> 
+        <link rel="manifest" href="manifest.webmanifest">
+        <meta name="theme-color" content="#ccffcc">
+        <link rel="apple-touch-icon" href="icon192.png">
     </head>
 <body>
     <main>
@@ -23,6 +26,20 @@
             <select title="Output Currency" id="output-currency" name="output-currency"></select>
         </section>
         <button>Calculate</button>
+
+        <div id="pwa-install-prompt">
+            <strong>Install App</strong>
+            <p>Do you want to install this App as a PWA?</p>
+            <div class="prompt-buttons">
+              <button data-id="pwa-install-y">Yes</button>
+              <button data-id="pwa-install-n">No</button>
+            </div>
+          </div>
     </main>
+    <script>        
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
 </html>

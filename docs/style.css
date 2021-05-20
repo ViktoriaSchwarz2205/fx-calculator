@@ -39,3 +39,21 @@ button {
     width:100%;
     padding:8px;
 }
+
+#pwa-install-prompt {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 15px;
+    color: whitesmoke;
+    background: black;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%,-110%);
+}
+#pwa-install-prompt.show {
+    display: block;
+}
+.prompt-buttons {
+    display: flex;
+}
